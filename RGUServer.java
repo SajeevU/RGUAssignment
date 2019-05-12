@@ -18,10 +18,10 @@ public class RGUServer {
                     out.println(new Date().toString());
                     //Parts Related to Create Database Connection and retrieve Data
                     Connection con=DriverManager.getConnection(  
-                                  "jdbc:mysql://localhost:3306/cashout","root","paycollect");  
+                                  "jdbc:mysql://localhost:3306/rgudb","root","password");  
                     //here sonoo is database name, root is username and password  
                     Statement stmt=con.createStatement();  
-                    ResultSet rs=stmt.executeQuery("select * from h5_txn");  
+                    ResultSet rs=stmt.executeQuery("select * from Recycling");  
                 
                     StringBuffer xmlArray = new StringBuffer("<results>");
                     while (rs.next()) {
